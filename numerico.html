@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="imagens/shortCutIcon.png">
+    <script data-ad-client="ca-pub-2924168652239046" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+    <title>Conversor numérico</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xl fixed-top  navbar-dark">
+        <a href="index.html" class="navbar-brand"><img src="imagens/serCidadaoLogo.png" class="logo"></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- links -->
+        <div id="menu" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-md-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="medida.html">MEDIDAS</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">NUMERICA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aplicacao.html">APLICAÇÃO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="financiamento.html">FINANCIAMENTO</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="valorFuturo.html">VALOR FUTURO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calculadora.html">CALCULADORA</a>
+                </li>
+
+
+            </ul>
+        </div>
+
+    </nav>
+    <div class="container conversao">
+        <div id="principal">
+            <div>
+                <h1 class="h1">SELECIONE SUA CONVERSÃO</h1>
+            </div>
+            <div class="row" Style="margin-top:50px;">
+
+
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <input type="text" id="numeroConversao" onblur="convertendo()" class="numero"
+                            placeholder="Numero a ser convertido">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <select class="form-control" id="tipo1" onchange="converter1(); convertendo()">
+                            <option value="">Converter de:</option>
+                            <option value="binario">Binário</option>
+                            <option value="decimal">Decimal</option>
+                            <option value="octal">Octal</option>
+                            <option value="hexadecimal">Hexadecimal</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <select class="form-control" id="tipo2" onchange="converter2(); convertendo()">
+                            <option value="">Para:</option>
+                            <option value="binario">Binário</option>
+                            <option value="decimal">Decimal</option>
+                            <option value="octal">Octal</option>
+                            <option value="hexadecimal">Hexadecimal</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="textoConversao">
+                    <p>=</p>
+                </div>
+
+
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <input type="text" id="resultado" disabled="true" class="resultado" placeholder="Resultado">
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+        </div>
+        <div class="conteudo">
+            <p>Conversão de base numérica é a passagem da representação de um número de uma base numérica para outra,
+                alterando a simbologia para se adequar à nova base. A base que normalmente usamos é a decimal ou base
+                dez, pois contém dez algarismos (0, 1, 2, 3, 4, 5, 6, 7, 8, 9). Por exemplo, o número inteiro
+                representado em base decimal como 10, pode ser escrito como '1010' em base binária ou 'A' em base
+                hexadecimal.<br>
+
+                Bases numéricas
+                O homem contemporâneo está familiarizado com a base 10 (decimal), no dia-a-dia, já os computadores
+                atuais trabalham exclusivamente com a base 2 (binário), assim é preciso fazer conversões entre estas
+                bases quando se pretende inserir algum valor para ser processado pelo computador. A diferença de
+                interpretação se mostra a seguir:
+                1010<br>
+
+
+                onde se usou o índice 2 para indicar que o número inicial 1010 se encontra representado no sistema de
+                numeração binário, ou base 2, enquanto que o número final 10 está representado no sistema de numeração
+                decimal, ou base 10.<br>
+
+                Em calculadoras e computadores, a conversão de números para o binário para a operação interna, e depois,
+                para o decimal na visualização é um processo interno pré-programado para ser feito por ela. O ponto a
+                ser entendido aqui é que internamente ela faz tudo em binário, em outras palavras: ela converte o que
+                foi digitado para binário, faz o cálculo, converte o resultado para decimal e apresenta o resultado.<br>
+
+                No entanto quando se está escrevendo um programa é normal a introdução de valores no meio do código, e
+                em muitas situações a digitação de códigos binários é muito complicada/longa para o programador, então
+                existem outros códigos que facilitam a digitação, na prática é muito utilizada a base 8 (octal), e a
+                base 16 (hexadecimal), ambas derivadas da base 2 (note que estas bases facilitam a digitação somente, de
+                qualquer forma ao ser compilado toda e qualquer base usada para escrever o programa é convertida para
+                base 2 para que o valor seja usado pelo processador).<br>
+
+                A medida angular de um grau é dividida em 60 minutos de arco, e cada minuto de arco em 60 segundos de
+                arco. Trata-se de uma unidade de medida usada em astronomia e geometria.<br>
+
+                Nas medidas usuais de tempo, uma hora é dividida em 60 minutos, e cada minuto em 60 segundos. Além das
+                unidades de tempo usadas no cotidiano, existem ainda várias frações do segundo, que estão por sua vez em
+                base decimal. Estas são mais freqüentemente utilizadas em Física.<br>
+
+
+                A técnica de divisões sucessivas é utilizada para conversão de números inteiros do sistema decimal para
+                o binário. Esta técnica consiste em dividir o número original pela base 2, o resto da divisão será um
+                dígito e o resultado da divisão é novamente dividido por 2. Esta última etapa se repete até que o
+                resultado da divisão seja zero. Para melhor compreensão do método, a imagem ao lado mostra um exemplo de
+                conversão do número decimal 19 para binário.<br>
+
+
+
+
+                Como mostra o exemplo, após as sucessivas divisões, os dígitos (resto da divisão) são ordenados a partir
+                da esquerda para direita, formando assim o código binário.<br>
+
+                Para a conversão de números fracionários, é utilizada a técnica de multiplicações sucessivas, no
+                entanto, a parte inteira do número ainda é convertida pelo método das divisões sucessivas. Neste método,
+                multiplica-se o número fracionário por 2 (base do sistema binário) e a parte inteira do número
+                resultante é o primeiro dígito fracionário do binário. A parte fracionária restante é novamente
+                multiplicada por 2 e a parte inteira do número resultante é o segundo dígito fracionário do binário.
+                Esses passos são seguidos até que o resultado da multiplicação seja um número inteiro ou até a precisão
+                desejada.<br>
+
+                Exemplo
+                Conversão do número 19,6875
+                Do exemplo anterior: (19)10 = (10011)2
+                0,6875 x 2 = 1,375
+                0,375 x 2 = 0, 75
+                0,75 x 2 = 1,5
+                0,5 x 2 = 1,0 – fim.
+                (19,6875)10 = (10011,1011)2
+                Se as divisões sucessivas forem feitas com o uso de uma calculadora, é possível saber o resto da divisão
+                da seguinte forma: se o resultado é um número inteiro, então o resto é 0; se o resultado tem parte
+                fracionária, então o resto é 1. Lembre que quando o resultado for fracionário, utiliza-se somente a
+                parte inteira para realizar a próxima divisão.<br>
+
+                Conversão de binário para decimal<br>
+
+                A conversão de números da base 2 para base 10 é bastante simples. Basta reescrever o número numa
+                expansão de base 2, conforme o exemplo abaixo.
+                (0110)2 = 0(3)1(2)1(1)0(0)
+                0*2^3 + 1*2^2 + 1*2^1 +0*2^0 = 0 + 1*4 + 1*2 + 0 = 4 + 2 = (6)10br>
+
+                Conversão de octal para decimal<br>
+
+                A conversão de números da base 8 para base 10 é muito semelhante à conversão de binário para decimal.
+                Basta reescrever o número numa expansão de base 8, conforme o exemplo a seguir. (372)8 = 3*82 + 7*81 +
+                2*80 = 3*64 + 7*8 + 2*1 = (250)10<br>
+
+                Conversão de octal para binário<br>
+
+                A conversão de números de base 8 para a base 2 é feita convertendo cada dígito no seu equivalente
+                binário de 3 bits. A tabela abaixo mostra o equivalente binário de cada dígito do sistema octal:
+                Por exemplo, para converter (472)8 em binário, devemos substituir os números: 4 em 100; 7 em 111; 2 em
+                010; Desta forma, obtemos o número binário 100111010.<br>
+
+                Conversão de binário para octal<br>
+
+                Para fazer a conversão de números binários para octais, utiliza-se a mesma tabela de conversão utilizada
+                para converter números octais em binários. Para isso, cada grupo de 3 bits do sistema binário é
+                convertido em seu dígito equivalente do sistema octal conforme exemplo a seguir:
+                O binário 100111010 tem os seguintes grupos de 3 bits: 100, 111 e 010. Assim, o seu equivalente em octal
+                é o número 472.<br>
+
+                Caso o binário não tenha grupos regulares de 3 bits, podem ser adicionados até 2 0s à esquerda do
+                número. Por exemplo, o binário 11010110 pode ser adicionado de 1 zero, passando a ser composto pelos
+                grupos 011, 010 e 110.
+                Conversão de decimal para hexadecimal<br>
+
+                Da mesma maneira que é feita a conversão de decimal para binário, a conversão para hexadecimal é feita
+                utilizando as divisões sucessivas. Entretanto, nesse caso, as divisões dos números inteiros são feitas
+                por 16.<br>
+
+                Conversão de hexadecimal para binário<br>
+
+                Para transformar números hexadecimais em binários, cada dígito hexadecimal deve ser convertido no seu
+                equivalente binário de 4 bits, conforme a tabela (X).<br>
+
+                Por exemplo, o número (BA6)16 = 101110100110 , já que B equivale a 1011, A equivale a 1010 e 6 equivale
+                a 0110.<br>
+
+                Conversão de binário para hexadecimal<br>
+
+                Fazendo o inverso do processo anterior, é possível transformar números binários em hexadecimais. Ou
+                seja, deve-se converter os grupos de 4 bits do sistema binário em seus dígitos equivalente do sistema
+                hexadecimal. Assim como para conversão de sistema binário em octal, são acrescentados 0s para completar
+                os grupos do sistema binário quando necessário.<br>
+
+                Exemplo: Para converter o número 1110100110, são adicionados dois zeros a esquerda do número, formando
+                os grupos de 4 bits 0011, 1010 e 0110. Convertendo nos equivalentes em hexadecimal, temos o número 3A6.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="numerico.js"></script>
+        <script src="public/js/jquery.js"></script>
+        <script src="public/js/bootstrap.bundle.min.js"></script>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="imagens/shortCutIcon.png">
+    <script data-ad-client="ca-pub-2924168652239046" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <title>Aplicação</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xl fixed-top  navbar-dark">
+        <a href="index.html" class="navbar-brand"><img src="imagens/serCidadaoLogo.png" class="logo"></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- links -->
+        <div id="menu" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-md-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="medida.html">MEDIDAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="numerico.html">NUMERICA</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="aplicacao.html">APLICAÇÃO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="financiamento.html">FINANCIAMENTO</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="valorFuturo.html">VALOR FUTURO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calculadora.html">CALCULADORA</a>
+                </li>
+
+
+            </ul>
+        </div>
+
+    </nav>
+    <div class="container ">
+        <div id="principal">
+            <div>
+                <h1 class="h1">APLICAÇÃO</h1>
+            </div>
+            <div class="row " Style="margin-top:50px;">
+
+
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <p class="paragrafoApli">Valor do depósito regular</p>
+                        <input type="text" id="depositoRegular" onchange="aplicacao()" class="numero"
+                            placeholder="Ex: 10000,30">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <p class="paragrafoApli">Quantidade de meses</p>
+                        <input type="text" id="qntMeses" onchange="aplicacao()" class="numero" placeholder="Ex: 12">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <p class="paragrafoApli">Taxa de juros mensal (% a.m.)</p>
+                        <input type="text" id="jurosMensal" onchange="aplicacao()" class="numero" placeholder="Ex: 10">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <p class="paragrafoApli">Valor final obtido</p>
+                        <input type="text" id="valorFinal" disabled="true" class="resultado "
+                            placeholder="Valor final obtido">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <p class="paragrafoApli">Ganhos Totais</p>
+                        <input type="text" id="ganhosTotais" disabled="true" class="resultado"
+                            placeholder="Ganhos totais">
+                    </div>
+                </div>
+            </div>
+            <div class="conteudo" Style="margin-top:340px;">
+                <p>Aplicação é um termo que provém do vocábulo latim applicatĭo e que faz referência à ação e ao efeito
+                    de aplicar ou de se aplicar (pôr uma coisa em cima de outra, utilizar, empregar ou executar algo,
+                    atribuir).
+                    <br>Exemplos: “Preciso de uma nova aplicação da vacina antes de partir para a África”, “A aplicação
+                    será por via intravenosa para acelerar os tempos”, “O que é interessante nesta faca é que tem várias
+                    aplicações: pode ser usada para cortar queijos macios, para descascar a fruta ou para tirar as
+                    espinhas do peixe”.<br>
+
+                    A noção de aplicação também é usada para fazer referência à assiduidade e à dedicação com que se
+                    realiza algo. Esta utilização do conceito é frequente no âmbito do estudo, onde o aluno aplicado é
+                    aquele que cumpre com as suas obrigações e obedece às ordens do docente: “Se continuares a
+                    demonstrar essa mesma aplicação, serás eleito aluno exemplar da escola”.
+                    <br>
+                    Aplicação também é um termo bastante usado no meio financeiro, nesse caso o termo empregado é
+                    “aplicação financeira”, o qual descreve os investimentos que uma pessoa ou empresa realiza.
+                    Em suma, uma aplicação financeira é quando se compra um ativo e se espera que, com o tempo, ele
+                    ganhe valor, podendo depois vender por um valor mais alto. As aplicações financeiras existem com
+                    diferentes rentabilidades, vencimentos, liquidez, etc.<br>
+                    Cabe dizer que as aplicações financeiras podem tanto ser mais seguras como as chamadas de aplicações
+                    de renda fixa (que oferecem um rendimento menor), como as com maior risco (a exemplo disso temos os
+                    investimentos na Bolsa de Valores) que oferecem maior rendimento.<br>
+                    No Brasil algumas das aplicações financeiras mais conhecidas são: Tesouro Direto, fundos de
+                    investimento, CDBs (certificados de depósito bancários), LCI, LCA, entre outras.<br>
+                    Uma aplicação informática é um tipo de software que permite que o utilizador realize um ou vários
+                    tipos de trabalho. Os processadores de texto e as folhas de cálculo são exemplos de aplicações
+                    informáticas, ao passo que os sistemas operativos ou os programas utilitários (que cumprem tarefas
+                    de manutenção) não fazem parte destes programas.<br>
+                    As aplicações podem ser desenvolvidas à medida (para satisfazer as necessidades específicas do
+                    utilizador) ou fazer parte de um pacote integrado (como é o caso do Microsoft Office).
+                    Existem também as aplicações que são programas feitos para aparelhos móveis, só que o termo mais
+                    utilizado nesse caso é “aplicativos”.<br>
+                    No âmbito da matemática, por último, uma aplicação é uma operação através da qual se faz
+                    corresponder, a cada elemento de um conjunto, um único elemento de outro conjunto.
+                    Aplicação pode ainda ser um termo a surgir quando se está falando de aplicar o que fora estudado,
+                    por exemplo: “agora faremos a aplicação do que fora estudado nesse primeiro exercício” ou ainda
+                    “agora que vimos seu conceito, iremos fazer a aplicação dos “porquês” em diferentes contextos.
+                    Por fim, aplicação pode ainda descrever os adornos que são colocados em roupas, por exemplo:
+                    “aplicação de strass em tecido”, “aplicação de fita” ou ainda “aplicação de tecido” (uma técnica de
+                    artesanato mais conhecida por se fazer a aplicação de moldes com desenho sobre determinados tipos de
+                    tecidos como o algodão).
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="aplicacao.js"></script>
+        <script src="public/js/jquery.js"></script>
+        <script src="public/js/bootstrap.bundle.min.js"></script>
+    </footer>
+</body>
+
+</html>

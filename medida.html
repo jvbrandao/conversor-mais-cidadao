@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="imagens/shortCutIcon.png">
+    <script data-ad-client="ca-pub-2924168652239046" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+    <title>Conversor de medidas</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xl fixed-top  navbar-dark">
+        <a href="index.html" class="navbar-brand"><img src="imagens/serCidadaoLogo.png" class="logo"></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- links -->
+        <div id="menu" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-md-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="medida.html">MEDIDAS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="numerico.html">NUMERICA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aplicacao.html">APLICAÇÃO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="financiamento.html">FINANCIAMENTO</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="valorFuturo.html">VALOR FUTURO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="calculadora.html">CALCULADORA</a>
+                </li>
+
+
+            </ul>
+        </div>
+
+    </nav>
+    <div class="container ">
+        <div id="principal">
+            <div>
+                <h1 class="h1">SELECIONE SUA CONVERSÃO</h1>
+            </div>
+            <div class="row" Style="margin-top:50px;">
+
+
+
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <input type="text" id="numeroConversao" onchange="medidaConversao()" class="numero"
+                            placeholder="Numero a ser convertido">
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <select class="form-control" id="tipo1" onchange="converter1(); medidaConversao()">
+                            <option value="inicial">Converter de:</option>
+                            <option value="quilometro">Quilometro</option>
+                            <option value="metro">Metro</option>
+                            <option value="centimetro">Centimetro</option>
+                            <option value="milimetro">Milimetro</option>
+                            <option value="micrometro">Micrometro</option>
+                            <option value="nanometro">Nanometro</option>
+                            <option value="milha">Milha</option>
+                            <option value="jarda">Jarda</option>
+                            <option value="pe">Pé</option>
+                            <option value="polegada">Polegada</option>
+                            <option value="milhaNautica">Milha Náutica</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <select class="form-control" id="tipo2" onchange="converter2(); medidaConversao()">
+                            <option value="inicial">Para:</option>
+                            <option value="quilometro">Quilometro</option>
+                            <option value="metro">Metro</option>
+                            <option value="centimetro">Centimetro</option>
+                            <option value="milimetro">Milimetro</option>
+                            <option value="micrometro">Micrometro</option>
+                            <option value="nanometro">Nanometro</option>
+                            <option value="milha">Milha</option>
+                            <option value="jarda">Jarda</option>
+                            <option value="pe">Pé</option>
+                            <option value="polegada">Polegada</option>
+                            <option value="milhaNautica">Milha Náutica</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="textoConversao">
+                    <p>=</p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <div class="mb-2">
+                        <input type="text" id="resultado" disabled="true" class="resultado" placeholder="Resultado">
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+        </div>
+        <div class="conteudo">
+            <p>A conversão de unidades na Física permite transformar as formas de representação de uma grandeza de
+                acordo com a necessidade. Para tanto, é necessário que se conheçam as unidades estabelecidas pelo
+                sistema internacional de unidades (SI) para cada tipo de grandeza física. <br>
+
+
+                Conversão de unidades na Física <br>
+                É comum que, ao resolvermos algum exercício, seja necessário realizar algumas conversões para que as
+                unidades informadas sejam compatíveis entre si. Dessa forma, conhecer as regras de conversão entre
+                unidades é fundamental para desenvolvermos corretamente exercícios. <br>
+                O sistema internacional de unidades relaciona algumas grandezas fundamentais da Física com suas unidades
+                <br>
+                Todas as unidades do SI apresentam múltiplos e submúltiplos que são escritos por meio dos prefixos do
+                SI. Alguns dos prefixos do SI são k (quilo – 10³), c (centi – 10-2), M (mega – 106), m (mili – 10-3),
+                entre outros. <br>
+
+                Conversão de unidades de comprimento <br>
+                A unidade de comprimento no sistema internacional é metro. Nesse sistema, metro é definido a partir da
+                velocidade da luz, ou seja, trata-se do espaço percorrido pela luz durante um intervalo de tempo de
+                1/299.792.458 s. <br>
+                Existem diversas unidades de comprimento derivadas do metro que são escritas por meio de prefixos <br>
+
+                Conversão de unidades de área <br>
+                As unidades de área do sistema internacional de unidades e suas derivadas podem ser facilmente
+                transformadas de forma similar àquela empregada para a transformação das unidades de distância. <br>
+
+                Podemos converter medidas de área do SI em outras medidas de área desse sistema. Nesse caso, basta
+                multiplicarmos ou dividirmos seu valor por 10² (100) quantas vezes forem necessárias. <br>
+
+                Conversão de unidades de tempo
+                A unidade tempo do sistema internacional de unidades é segundo (s). Atualmente, segundo é definido a
+                partir do intervalo de tempo decorrido entre 9.192.631.770 transições hiperfinas do estado fundamental
+                de energia do átomo de césio. <br>
+                Existem diversas unidades de medida de tempo, e todas podem ser relacionadas ao segundo. <br>
+
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <!-- JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="medida.js"></script>
+        <script src="public/js/jquery.js"></script>
+        <script src="public/js/bootstrap.bundle.min.js"></script>
+    </footer>
+</body>
+
+</html>

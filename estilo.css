@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+body{
+    background-color: #71a5cf;
+}
+
+nav{
+    background-color: #000000;
+   
+}
+
+
+#menu{
+    font-family: 'Open Sans', sans-serif;
+
+
+}
+#principal{
+    min-height: 105vh;
+    padding-top: 100px;
+    align-items: center;
+    justify-content: center;   
+}
+
+.nav-item{
+    padding:10px;
+}
+.toggle{
+    background-color:#000000;
+    color:white;
+}
+.select{
+    display: block;
+    align-items: center;
+    justify-content: center;
+
+}
+.form-control{
+    margin:0px;
+    width:250px;
+    height:38px;
+    text-align-last: center;
+    
+}
+
+
+.resultado{
+    margin:0px;
+    width:250px;
+    height:40px;
+    border-radius: 5px;
+    background-color:rgb(212, 209, 209);
+    text-align:center;
+}
+.numero{
+    
+    width:250px;
+    height:40px;
+    border-radius: 5px;
+    background-color:rgb(255, 255, 255);
+    text-align:center;
+    box-shadow: none;
+}
+.h1{
+    text-align:center;
+    font-size: 40px;
+    font-weight: bolder;
+    margin:30px;
+    color:#000000;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+}
+.logo{
+    width:400px; 
+    margin-left: 5px;
+}
+
+.textoConversao{
+    font-size:20px;
+    text-align:center;
+    margin:0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn{
+    font-family: 'Open Sans', sans-serif;
+    margin-top:10px;
+}
+.conteudo{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+.index{
+    margin: 20px;
+}
+.calculadora{
+    background-color:rgb(1, 83, 83);
+    padding: 30px;
+    margin-top:50px;
+    box-shadow: 1px 1px 1px rgb(7, 19, 126);
+    border-radius:20px;
+    
+}
+.botao{
+    margin:5px;
+    box-shadow: 1px 1px 1px rgb(7, 19, 126);
+    width:60px;
+    height:60px;
+    background-color: black;
+}
+.botaoIndex{
+    margin:5px;
+    box-shadow: 1px 1px 1px rgb(7, 19, 126);
+    width: 300px;
+    background-color: black;
+    color:white;
+    border-radius: 5px;
+}
+.zero{
+    width:130px;
+}
+.igual{
+    height:130px;
+}
+.limpar{
+    width:130px;
+}
+.result{
+    margin-bottom: 5px;
+    background-color:white;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding:10px;
+    width: 270px;
+    border-radius: 10px;
+    text-align: right;
+    box-shadow: 1px 1px 1px rgb(7, 19, 126);
+}
+.paragrafoApli{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: -3px;
+}
